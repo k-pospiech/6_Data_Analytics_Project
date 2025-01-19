@@ -4,7 +4,7 @@
 
 Dataset was filtered to get the top 5 skills for top 3 roles. This should help with focusing the attention on abilities that are the most sought in different companies in Sweden.
 
-View my notebook with detailed steps here: [2_Skill_demand.ipynb](Data-analytics-project\2_Skill_Demand.ipynb)
+View my notebook with detailed steps here: [2_Skill_demand.ipynb](2_Skill_Demand.ipynb)
 
 
 ### Visualize data
@@ -33,7 +33,7 @@ plt.show()
 ```
 
 ### Results
-![Visualization of top data skills](Data-analytics-project\Images\skill_demand_all_data_roles.png)
+![Visualization of top data skills](Images/skill_demand_all_data_roles.png)
 
 ### Insights
 1. The most important skill to focus on is SQL, requested in more then 50% of all three main data roles
