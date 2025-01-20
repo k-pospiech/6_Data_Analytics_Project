@@ -39,3 +39,40 @@ plt.show()
 1. The most important skill to focus on is SQL, requested in more then 50% of all three main data roles
 2. Python is the close second - while being even more demanded for Data Engineers and Data Scientists, it showed up in far fewer ads for Data Analysts 
 3. Both data scientist and data engineer roles require more specialized technical skills (AWS, Azure), compared to Data Analysts that are expected to be better at more general data management and visualization tools (Power BI, Tableau)
+
+
+## 2. How are in-demand skills trending for Data Analysts?
+
+```python
+
+df_plot = df_SE_percent.iloc[:, :5]
+
+sns.lineplot(df_plot, dashes=False, palette='tab10')
+sns.set_theme(style='ticks')
+sns.despine()
+
+plt.title('Trending top skills for data analyst in Sweden')
+plt.ylabel('Likelihood of showing up in the job posting')
+plt.xlabel('2023')
+plt.legend().remove()
+
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+for i in range(5):
+    plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i])
+
+plt.show()
+
+```
+
+### Results
+
+![Trending top skills for Data Analysts in Sweden](Images/skill_trend.png)
+*Bar graph visualizing the trending top skills for data analysts in Sweden in 2023*
+
+## Insights
+1. Trends are not steady probably because not large enough sample size
+2. SQL and Python consistently stay in the top demand throughout the year
+3. Remaining three skills from the top are in demand very interchangeably which suggests they may be equally important for employers
